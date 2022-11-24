@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
+import { AuthService } from 'src/app/core/auth.service';
 
 @Component({
   selector: 'be-product-list',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
 })
 export class ProductListComponent {
 
+
+  constructor(private _auth: AuthService) {}
 }
