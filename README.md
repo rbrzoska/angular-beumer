@@ -20,7 +20,7 @@ zrobic podswietlenie aktywnego linku
 ## 6. Moduły (NgModule)
 Stwórz moduł products a w nim komponenty ProductListComponent ProductItemComponent ProductAddComponent ProductFormComponent ProductEditComponent
 Stwórz routing ze ścieżkami /products => ProductList, /products/:id/edit => ProductEdit, /products/add => ProductAdd
-
+Dodaj link do modułu products w nawigacji
 ## 7. Serwisy
 
 ## 8. RxJS

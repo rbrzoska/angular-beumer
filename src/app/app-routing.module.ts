@@ -9,6 +9,7 @@ const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'about', component: AboutComponent},
   {path: 'lazy', loadChildren: () => import('./lazy/lazy.module')},
+  {path: 'products', loadChildren: () => import('./products/products.module')},
   {path: 'contact', component: ContactComponent },
   {path: '**', component: PageNotFoundComponent }
 ];
