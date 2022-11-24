@@ -16,6 +16,7 @@ komponent PageNotFound (sciezka **)
 dodac link do About
 przeniesc nawigacje do komponentu Navigation
 zrobic podswietlenie aktywnego linku
+
 ## 6. Moduły (NgModule)
 
 ## 7. Serwisy

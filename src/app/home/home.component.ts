@@ -16,5 +16,6 @@ export class HomeComponent {
   handleClick(event: Event) {
      console.log(event)
      this.homeOutput.emit('I am from home component')
+     import('../configs/api.config.json').then(v => console.log(v))
   }
 }
