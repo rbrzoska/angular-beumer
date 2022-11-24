@@ -18,6 +18,8 @@ przeniesc nawigacje do komponentu Navigation
 zrobic podswietlenie aktywnego linku
 
 ## 6. Moduły (NgModule)
+Stwórz moduł products a w nim komponenty ProductListComponent ProductItemComponent ProductAddComponent ProductFormComponent ProductEditComponent
+Stwórz routing ze ścieżkami /products => ProductList, /products/:id/edit => ProductEdit, /products/add => ProductAdd
 
 ## 7. Serwisy
 
