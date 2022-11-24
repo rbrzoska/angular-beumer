@@ -15,7 +15,7 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "be",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -54,6 +54,7 @@
               "outputHashing": "all"
             },
             "development": {
+              "assets": [],
               "buildOptimizer": false,
               "optimization": false,
               "vendorChunk": true,
