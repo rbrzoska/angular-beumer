@@ -12,5 +12,6 @@ isLoggedIn = false;
   }
 
   toggle() {
+    this.isLoggedIn = !this.isLoggedIn;
   }
 }
