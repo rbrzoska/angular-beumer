@@ -8,11 +8,11 @@ https://chrome.google.com/webstore/detail/angular-devtools/ienfalfjdbdpebioblfac
 ## 2. Angular CLI, podstawy projektu, budowa workspace
 
 ## 3. Komponenty i szablony
-
+About (/about), Contact(/contact)
 ## 4. Dyrektywy, Pipes
 
 ## 5. Routing
-
+komponent PageNotFound (sciezka **)
 ## 6. Moduły (NgModule)
 
 ## 7. Serwisy
