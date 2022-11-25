@@ -4,10 +4,13 @@
     <div >{{ item.title }} {{item.price}}</div>
  </ng-template> -->
  <button (click)="handleClick()">Click</button>
- <div *ngFor="let item of products;let i = index;" beTest beTestBgColor="blue" beHighlight="my-highlight"
-      [ngClass]="{alert: item.price > 10}">
-    <ng-container>({{i}}) {{ item.name }} {{item.price | test:1.23}} </ng-container>
+ <ng-container *ngIf="products$ | async as products; else loader" >
+   <div *ngFor="let item of products;let i = index;" beTest beTestBgColor="blue" beHighlight="my-highlight"
+   [ngClass]="{alert: item.price > 10}">({{i}}) {{ item.name }} {{item.price | test:1.23}}
 </div>
+ </ng-container>
+
+
 
 </div>
 <ng-template #loader>

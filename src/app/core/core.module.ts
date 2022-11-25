@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './auth.service';
 import { Router } from '@angular/router';
+import { AuthInterceptor } from './auth.interceptor';
 
 const authFactory = (router: Router) => new AuthService(router)
 
@@ -13,9 +14,10 @@ const authFactory = (router: Router) => new AuthService(router)
     HttpClientModule
   ],
   providers: [
-    AuthService
+    AuthService,
     // { provide: AuthServise, useClass: AuthService }
     // { provide: AuthService, useFactory: authFactory, deps: [Router] }
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
   ]
 })
 export class CoreModule { }

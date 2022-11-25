@@ -1,6 +1,8 @@
 import { Component, Inject } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AuthService } from 'src/app/core/auth.service';
 import { Product } from 'src/app/models';
+import { ProductsService } from '../products.service';
 
 @Component({
   selector: 'be-product-list',
@@ -9,17 +11,12 @@ import { Product } from 'src/app/models';
 })
 export class ProductListComponent {
 
-  products: Product[] = [
-    { id: '1', price: 14, name: 'Prod1', description: 'bfdsfdslkfsdf' },
-    { id: '2', price: 0.99, name: 'Prod2', description: 'asasdasd' },
-    { id: '3', price: 10.99, name: 'Prod3' },
-    { id: '4', price: 1.98, name: 'Prod4' },
-    { id: '6', price: 1.98, name: 'Prod6' },
-    { id: '5', price: 5, name: 'Prod5', description: '13424324324324' }
-  ];
+  products$!: Observable<Product[] | null>;
 
-
-  constructor(private _auth: AuthService) {}
+  constructor(private _productsService: ProductsService) {
+  this.products$ = this._productsService.products$;
+  this._productsService.fetchProducts();
+  }
 
   handleClick() {
     console.log('click')
