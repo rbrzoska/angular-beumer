@@ -1,1 +1,7 @@
-<p>product-form works!</p>
+<p>My form</p>
+<form [formGroup]="productForm">
+    <input formControlName="name">
+{{productForm?.controls?.name?.errors | json}}
+    <input formControlName="firstname">
+</form>
+{{productForm?.controls?.firstname?.errors | json}}
