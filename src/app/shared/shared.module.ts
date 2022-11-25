@@ -1,13 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TestPipe } from './test.pipe';
+import { TestDirective } from './test.directive';
 
 @NgModule({
   declarations: [
-    TestPipe
+    TestPipe,
+    TestDirective
   ],
   exports: [
-    TestPipe
+    TestPipe,
+    TestDirective
   ],
   imports: [
     CommonModule
