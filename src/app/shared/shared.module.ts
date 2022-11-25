@@ -7,6 +7,7 @@ import { TestPipe } from './test.pipe';
     TestPipe
   ],
   exports: [
+    TestPipe
   ],
   imports: [
     CommonModule
