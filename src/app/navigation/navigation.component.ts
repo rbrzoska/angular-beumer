@@ -8,9 +8,15 @@ import { AuthService } from '../core/auth.service';
 })
 export class NavigationComponent {
 
+  isLoggedIn$!: boolean;
+
   constructor(private _auth: AuthService) {
+    _auth.isLoggedIn$.subscribe((v: boolean) => this.isLoggedIn = v)
   }
   handleLogin() {
-    this._auth.toggle();
+    this._auth.logIn();
+  }
+  handleLogout() {
+    this._auth.logOut();
   }
 }
