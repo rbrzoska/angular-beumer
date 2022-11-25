@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
 import { AuthService } from '../core/auth.service';
 
 @Component({
@@ -8,10 +9,10 @@ import { AuthService } from '../core/auth.service';
 })
 export class NavigationComponent {
 
-  isLoggedIn$!: boolean;
+  isLoggedIn$!: Observable<boolean>;
 
   constructor(private _auth: AuthService) {
-    _auth.isLoggedIn$.subscribe((v: boolean) => this.isLoggedIn = v)
+    this.isLoggedIn$ = _auth.isLoggedIn$;
   }
   handleLogin() {
     this._auth.logIn();

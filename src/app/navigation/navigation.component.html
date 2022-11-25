@@ -4,13 +4,10 @@
     <a routerLink="/lazy" routerLinkActive="active">Lazy</a>
     <a routerLink="/products" routerLinkActive="active">Products</a>
     <a routerLink="/about" routerLinkActive="active">About</a>
-    <ng-container *ngIf="(isLoggedIn$ | async) as isLoggedIn">
-        <button (click)="handleLogout()" *ngIf="isLoggedIn; else loginButton">Logout</button>
-        <ng-template #loginButton>
+    <button (click)="handleLogout()" *ngIf="isLoggedIn$ | async; else loginButton ">Logout</button>
+    <ng-template #loginButton>
             <button (click)="handleLogin()">Login</button>
-        </ng-template>
-    </ng-container>
-    
+    </ng-template>
     
     
     
