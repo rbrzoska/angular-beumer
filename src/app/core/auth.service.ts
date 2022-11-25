@@ -5,6 +5,10 @@ import { BehaviorSubject } from 'rxjs';
 @Injectable()
 export class AuthService {
 
+userData: any = {
+  userName: 'Alojzy',
+  userId: 123445
+}
 private _isLoggedInSubj = new BehaviorSubject<boolean>(false);
 
 isLoggedIn$ = this._isLoggedInSubj.asObservable();

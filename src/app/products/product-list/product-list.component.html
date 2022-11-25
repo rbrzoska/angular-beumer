@@ -1,5 +1,5 @@
-<div>
-
+<div *beForLoggedInUser="let user; let userid = id">
+{{user}} {{userid}}
  <!-- <ng-template ngFor let-item [ngForOf]="products">
     <div >{{ item.title }} {{item.price}}</div>
  </ng-template> -->
