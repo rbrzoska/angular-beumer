@@ -1,1 +1,12 @@
-<p>product-list works!</p>
+<div>
+
+ <!-- <ng-template ngFor let-item [ngForOf]="products">
+    <div >{{ item.title }} {{item.price}}</div>
+ </ng-template> -->
+ <button (click)="handleClick()">Click</button>
+ <div *ngFor="let item of products;let i = index;"
+      [ngClass]="{alert: item.price > 10}">
+    <ng-container>({{i}}) {{ item.title }} {{item.price | test:1.23}} </ng-container>
+</div>
+
+</div>
