@@ -10,12 +10,12 @@ import { Product } from 'src/app/models';
 export class ProductListComponent {
 
   products: Product[] = [
-    { id: '1', price: 14, title: 'Prod1', description: 'bfdsfdslkfsdf' },
-    { id: '2', price: 0.99, title: 'Prod2', description: 'asasdasd' },
-    { id: '3', price: 10.99, title: 'Prod3' },
-    { id: '4', price: 1.98, title: 'Prod4' },
-    { id: '6', price: 1.98, title: 'Prod6' },
-    { id: '5', price: 5, title: 'Prod5', description: '13424324324324' }
+    { id: '1', price: 14, name: 'Prod1', description: 'bfdsfdslkfsdf' },
+    { id: '2', price: 0.99, name: 'Prod2', description: 'asasdasd' },
+    { id: '3', price: 10.99, name: 'Prod3' },
+    { id: '4', price: 1.98, name: 'Prod4' },
+    { id: '6', price: 1.98, name: 'Prod6' },
+    { id: '5', price: 5, name: 'Prod5', description: '13424324324324' }
   ];
 
 

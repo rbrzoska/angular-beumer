@@ -6,7 +6,10 @@
  <button (click)="handleClick()">Click</button>
  <div *ngFor="let item of products;let i = index;" beTest beTestBgColor="blue" beHighlight="my-highlight"
       [ngClass]="{alert: item.price > 10}">
-    <ng-container>({{i}}) {{ item.title }} {{item.price | test:1.23}} </ng-container>
+    <ng-container>({{i}}) {{ item.name }} {{item.price | test:1.23}} </ng-container>
 </div>
 
 </div>
+<ng-template #loader>
+   <div>Loading...</div>
+</ng-template>
